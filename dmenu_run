@@ -1,2 +1,6 @@
 #!/bin/sh
-exec $(dmenu_path | dmenu "$@" -nb '#08020f' -nf '#fea63c' -sb '#fea63c' -sf '#08020f' -fn NotoMonoRegular:bold:pixelsize=14 )
+. "${HOME}/.cache/wal/colors.sh"
+exec $(dmenu_path | dmenu "$@" \
+	-nb "$color0" -nf "$color2" -sb "$color2" -sf "$color0"\
+	-fn Roboto:bold:pixelsize=16 )
+
